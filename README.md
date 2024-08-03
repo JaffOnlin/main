@@ -35,6 +35,47 @@ Window:Tab("Extra","rbxassetid://7734042071")
 MainTab:Section("God Mod")
 
 
+
+
+MainTab:InfoLabel("Put off to escape (Bot's Only)")
+
+MainTab:Button("On", function()
+game.Players.LocalPlayer.Character.Head.CanTouch = false
+game.Players.LocalPlayer.Character.LeftFoot.CanTouch = false
+game.Players.LocalPlayer.Character.RightFoot.CanTouch = false
+game.Players.LocalPlayer.Character.RightHand.CanTouch = false
+game.Players.LocalPlayer.Character.LeftHand.CanTouch = false
+game.Players.LocalPlayer.Character.RightLowerLeg.CanTouch = false
+game.Players.LocalPlayer.Character.RightUpperLeg.CanTouch = false
+game.Players.LocalPlayer.Character.LeftLowerLeg.CanTouch = false
+game.Players.LocalPlayer.Character.LeftUpperLeg.CanTouch = false
+game.Players.LocalPlayer.Character.LeftLowerArm.CanTouch = false
+game.Players.LocalPlayer.Character.LeftUpperArm.CanTouch = false
+game.Players.LocalPlayer.Character.RightUpperArm.CanTouch = false
+game.Players.LocalPlayer.Character.RightLowerArm.CanTouch = false
+game.Players.LocalPlayer.Character.UpperTorso.CanTouch = false
+game.Players.LocalPlayer.Character.LowerTorso.CanTouch = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanTouch = false
+end)
+MainTab:Button("Off", function()
+game.Players.LocalPlayer.Character.Head.CanTouch = true
+game.Players.LocalPlayer.Character.LeftFoot.CanTouch = true
+game.Players.LocalPlayer.Character.RightFoot.CanTouch = true
+game.Players.LocalPlayer.Character.RightHand.CanTouch = true
+game.Players.LocalPlayer.Character.LeftHand.CanTouch = true
+game.Players.LocalPlayer.Character.RightLowerLeg.CanTouch = true
+game.Players.LocalPlayer.Character.RightUpperLeg.CanTouch = true
+game.Players.LocalPlayer.Character.LeftLowerLeg.CanTouch = true
+game.Players.LocalPlayer.Character.LeftUpperLeg.CanTouch = true
+game.Players.LocalPlayer.Character.LeftLowerArm.CanTouch = true
+game.Players.LocalPlayer.Character.LeftUpperArm.CanTouch = true
+game.Players.LocalPlayer.Character.RightUpperArm.CanTouch = true
+game.Players.LocalPlayer.Character.RightLowerArm.CanTouch = true
+game.Players.LocalPlayer.Character.UpperTorso.CanTouch = true
+game.Players.LocalPlayer.Character.LowerTorso.CanTouch = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanTouch = true
+end)
+
 MainTab:Button("Fly", function()
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
@@ -90,45 +131,6 @@ end
 toggleFlying()
 end)
 
-
-MainTab:InfoLabel("Put off to escape (Bot's Only)")
-
-MainTab:Button("On", function()
-game.Players.LocalPlayer.Character.Head.CanTouch = false
-game.Players.LocalPlayer.Character.LeftFoot.CanTouch = false
-game.Players.LocalPlayer.Character.RightFoot.CanTouch = false
-game.Players.LocalPlayer.Character.RightHand.CanTouch = false
-game.Players.LocalPlayer.Character.LeftHand.CanTouch = false
-game.Players.LocalPlayer.Character.RightLowerLeg.CanTouch = false
-game.Players.LocalPlayer.Character.RightUpperLeg.CanTouch = false
-game.Players.LocalPlayer.Character.LeftLowerLeg.CanTouch = false
-game.Players.LocalPlayer.Character.LeftUpperLeg.CanTouch = false
-game.Players.LocalPlayer.Character.LeftLowerArm.CanTouch = false
-game.Players.LocalPlayer.Character.LeftUpperArm.CanTouch = false
-game.Players.LocalPlayer.Character.RightUpperArm.CanTouch = false
-game.Players.LocalPlayer.Character.RightLowerArm.CanTouch = false
-game.Players.LocalPlayer.Character.UpperTorso.CanTouch = false
-game.Players.LocalPlayer.Character.LowerTorso.CanTouch = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanTouch = false
-end)
-MainTab:Button("Off", function()
-game.Players.LocalPlayer.Character.Head.CanTouch = true
-game.Players.LocalPlayer.Character.LeftFoot.CanTouch = true
-game.Players.LocalPlayer.Character.RightFoot.CanTouch = true
-game.Players.LocalPlayer.Character.RightHand.CanTouch = true
-game.Players.LocalPlayer.Character.LeftHand.CanTouch = true
-game.Players.LocalPlayer.Character.RightLowerLeg.CanTouch = true
-game.Players.LocalPlayer.Character.RightUpperLeg.CanTouch = true
-game.Players.LocalPlayer.Character.LeftLowerLeg.CanTouch = true
-game.Players.LocalPlayer.Character.LeftUpperLeg.CanTouch = true
-game.Players.LocalPlayer.Character.LeftLowerArm.CanTouch = true
-game.Players.LocalPlayer.Character.LeftUpperArm.CanTouch = true
-game.Players.LocalPlayer.Character.RightUpperArm.CanTouch = true
-game.Players.LocalPlayer.Character.RightLowerArm.CanTouch = true
-game.Players.LocalPlayer.Character.UpperTorso.CanTouch = true
-game.Players.LocalPlayer.Character.LowerTorso.CanTouch = true
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanTouch = true
-end)
 
 MainTab:Button("Item gui (Book 1)", function()
 
@@ -436,13 +438,11 @@ end)
 
 PlayerTab:TextBox("WalkSpeed", function(value)
     getgenv().Walkspeed = value
-    pcall(function()
       local Player = game:service'Players'.LocalPlayer;
 Player.Character.Humanoid:GetPropertyChangedSignal'WalkSpeed':Connect(function()
 Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeed;
 end)
-Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeed;
-    end)
+
 end)
 
 PlayerTab:TextBox("JumpPower", function(value)
