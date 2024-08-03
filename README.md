@@ -1,8 +1,6 @@
---Script ðŸ‘‡
---loadstring(game:HttpGet("https://rawscripts.net/raw/Piggy-open-source-15390"))()
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/UI-Library/main/Source/MyUILib(Unamed).lua"))();
-local Window = Library:Create("PePPa Pig")
+local Window = Library:Create("Jaff")
 
 local ToggleGui = Instance.new("ScreenGui")
 local Toggle = Instance.new("TextButton")
@@ -76,8 +74,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CanTouch = true
 end)
 
 MainTab:Button("Item gui (Book 1)", function()
---Credits to the owner
--- Create PiggyGui
+
 local PiggyGui = Instance.new("ScreenGui")
 PiggyGui.Name = "PiggyGui"
 PiggyGui.Parent = game.CoreGui
