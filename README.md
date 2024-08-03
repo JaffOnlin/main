@@ -380,7 +380,11 @@ end)
 PlayerTab:TextBox("WalkSpeed", function(value)
     getgenv().Walkspeed = value
     pcall(function()
-        game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = value
+      local Player = game:service'Players'.LocalPlayer;
+Player.Character.Humanoid:GetPropertyChangedSignal'WalkSpeed':Connect(function()
+Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeed;
+end)
+Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeed;
     end)
 end)
 
