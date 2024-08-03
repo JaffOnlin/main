@@ -128,7 +128,11 @@ local function toggleFlying(state)
     end
 end
 
-toggleFlying()
+if flyingEnabled then 
+toggleFlying(false)
+elseif flyingEnabled == false then 
+toggleFlying(true)
+end
 end)
 
 
@@ -437,7 +441,7 @@ noclip()
 end)
 
 PlayerTab:TextBox("WalkSpeed", function(value)
-    getgenv().Walkspeed = value
+    getgenv().WalkSpeed = value
       local Player = game:service'Players'.LocalPlayer;
 Player.Character.Humanoid:GetPropertyChangedSignal'WalkSpeed':Connect(function()
 Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeed;
